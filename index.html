@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="hins.css" />
 </head>
 <body>
+  <div class="wall" aria-hidden="true">
+    <div class="wall-photos" id="wall-photos"></div>
+    <canvas id="flow"></canvas>
+    <div class="wall-shade"></div>
+  </div>
   <a class="skip" href="#about">跳到正文</a>
 
   <nav class="nav" id="nav">
@@ -34,11 +39,8 @@
         <a class="btn" href="#start">从一首歌开始</a>
         <a class="btn ghost" href="#stage">直接看现场</a>
       </div>
+      <p class="hero-credit" id="hero-credit"></p>
     </div>
-    <figure class="hero-fig">
-      <img src="images/hins-concert-2022-portrait.jpg" alt="张敬轩在 2022 年 The Next 20 红馆演唱会上，身穿蓝色珠绣外套唱歌" />
-      <figcaption>The Next 20 · 红馆 · 2022.05.27<br />摄影 Kobe Leung · CC BY-SA 2.0</figcaption>
-    </figure>
   </header>
 
   <section class="about" id="about">
@@ -97,7 +99,7 @@
   <section class="gallery-sec" id="gallery">
     <p class="index">04 — 相册</p>
     <h2>台上的样子</h2>
-    <p class="lead">这些是可以授权使用的现场照片，来自 Wikimedia Commons。点开可以看作者。小红书上的图版权在拍摄者手里，这里没有转存。</p>
+    <p class="lead">壁纸和高清图来自红馆现场原片，点开可以看作者。照片会自己慢慢换，背后的光也在流动。</p>
     <div class="gallery" id="gallery-grid"></div>
   </section>
 

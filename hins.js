@@ -156,9 +156,9 @@ const photos = [
     cls: "tall",
   },
   {
-    src: "images/hins-concert-2022-d.jpg",
+    src: "images/hd/wall-stage.jpg",
     alt: "张敬轩站在圆形升降台上，台下是红色灯海",
-    cap: "360 互动环节",
+    cap: "360 互动环节 · 6000 像素原图",
     credit: "Kobe Leung · CC BY-SA 2.0",
     href: "https://commons.wikimedia.org/wiki/File:%E5%BC%B5%E6%95%AC%E8%BB%92%E6%BC%94%E5%94%B1%E6%9C%83_Hins_Cheung_Concert_27_5_2022_(52105216918).jpg",
     cls: "wide",
@@ -318,6 +318,78 @@ box.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !box.hidden) closeBox();
 });
+
+const wallSlides = [
+  { src: "images/hd/wall-stage-close.jpg", pos: "center 30%", credit: "流动壁纸 · 红馆 · Kobe Leung" },
+  { src: "images/hd/wall-sing-close.jpg", pos: "center 28%", credit: "流动壁纸 · 开口的那一下 · Kobe Leung" },
+  { src: "images/hins-concert-2022-portrait.jpg", pos: "center 18%", credit: "流动壁纸 · 近景 · Kobe Leung" },
+  { src: "images/hd/wall-denim-close.jpg", pos: "center 22%", credit: "流动壁纸 · 2022.11 · Tombus20032000" },
+  { src: "images/hd/wall-stage.jpg", pos: "center 40%", credit: "流动壁纸 · 灯海 · Kobe Leung" },
+  { src: "images/hins-concert-2022-e.jpg", pos: "center 22%", credit: "流动壁纸 · 红灯 · Kobe Leung" },
+];
+
+const wall = $("wall-photos");
+const credit = $("hero-credit");
+wall.innerHTML = wallSlides
+  .map(
+    (s, i) =>
+      `<img src="${esc(s.src)}" alt="" style="object-position:${esc(s.pos)}" ${i === 0 ? 'class="on"' : ""} />`
+  )
+  .join("");
+if (credit) credit.textContent = wallSlides[0].credit;
+
+const motionOK = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (motionOK && wallSlides.length > 1) {
+  let current = 0;
+  const frames = [...wall.querySelectorAll("img")];
+  setInterval(() => {
+    frames[current].classList.remove("on");
+    current = (current + 1) % frames.length;
+    frames[current].classList.add("on");
+    if (credit) credit.textContent = wallSlides[current].credit;
+  }, 7000);
+}
+
+const flow = $("flow");
+if (flow && motionOK) {
+  const ctx = flow.getContext("2d");
+  let w = 0;
+  let h = 0;
+  let tick = 0;
+  const resizeFlow = () => {
+    w = flow.width = Math.floor(window.innerWidth);
+    h = flow.height = Math.floor(window.innerHeight);
+  };
+  resizeFlow();
+  window.addEventListener("resize", resizeFlow);
+  const orb = (x, y, r, color) => {
+    const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+    g.addColorStop(0, color);
+    g.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fill();
+  };
+  const draw = () => {
+    tick += 0.0045;
+    ctx.clearRect(0, 0, w, h);
+    orb(w * (0.18 + Math.sin(tick) * 0.06), h * (0.28 + Math.cos(tick * 0.7) * 0.05), w * 0.34, "rgba(215,181,106,0.22)");
+    orb(w * (0.78 + Math.cos(tick * 0.55) * 0.05), h * (0.62 + Math.sin(tick * 0.45) * 0.06), w * 0.4, "rgba(176,36,58,0.2)");
+    orb(w * (0.48 + Math.sin(tick * 0.35) * 0.08), h * (0.84 + Math.cos(tick * 0.3) * 0.04), w * 0.28, "rgba(90,130,210,0.14)");
+    ctx.strokeStyle = "rgba(240,221,176,0.14)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    for (let x = 0; x <= w; x += 8) {
+      const y = h * 0.22 + Math.sin(x * 0.004 + tick * 1.4) * 18 + Math.sin(tick * 0.6) * 10;
+      if (x === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    requestAnimationFrame(draw);
+  };
+  draw();
+}
 
 const nav = $("nav");
 const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 12);
