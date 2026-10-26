@@ -140,76 +140,164 @@ const videos = [
 
 const photos = [
   {
-    src: "images/hins-concert-2022-portrait.jpg",
-    alt: "张敬轩穿蓝色珠绣外套唱歌，一只手举起",
-    cap: "The Next 20 · 2022.05.27",
-    credit: "Kobe Leung · CC BY-SA 2.0",
-    href: "https://commons.wikimedia.org/wiki/File:%E5%BC%B5%E6%95%AC%E8%BB%92%E6%BC%94%E5%94%B1%E6%9C%83_Hins_Cheung_Live_Concert_2022_(cropped).jpg",
+    src: "images/set/01-coat.jpg",
+    alt: "张敬轩穿黑色长外套，侧脸对着麦克风",
+    cap: "黑白 · 长外套",
+    credit: "Manna",
     cls: "tall",
+    pos: "center 28%",
   },
   {
-    src: "images/hins-concert-2022-b.jpg",
-    alt: "张敬轩在演唱会上微笑挥手",
-    cap: "The Next 20 · 挥手",
-    credit: "Kobe Leung · CC BY-SA 2.0",
-    href: "https://commons.wikimedia.org/wiki/Category:Hins_Cheung_in_2022",
+    src: "images/set/02-white-stand.jpg",
+    alt: "张敬轩穿白衬衫黑裤子站在台上唱歌",
+    cap: "白衬衫 · 站着唱",
+    credit: "momonlash",
     cls: "tall",
+    pos: "center 22%",
   },
   {
-    src: "images/hd/wall-stage.jpg",
-    alt: "张敬轩站在圆形升降台上，台下是红色灯海",
-    cap: "360 互动环节 · 6000 像素原图",
-    credit: "Kobe Leung · CC BY-SA 2.0",
-    href: "https://commons.wikimedia.org/wiki/File:%E5%BC%B5%E6%95%AC%E8%BB%92%E6%BC%94%E5%94%B1%E6%9C%83_Hins_Cheung_Concert_27_5_2022_(52105216918).jpg",
+    src: "images/set/03-white-sit.jpg",
+    alt: "张敬轩坐在台上，侧脸拿着麦克风",
+    cap: "白衬衫 · 坐着",
+    credit: "momonlash",
+    cls: "tall",
+    pos: "center 18%",
+  },
+  {
+    src: "images/set/04-white-front.jpg",
+    alt: "张敬轩坐在台上面向前方唱歌，鞋底是红色的",
+    cap: "白衬衫 · 正面",
+    credit: "momonlash",
+    cls: "tall",
+    pos: "center 16%",
+  },
+  {
+    src: "images/set/05-jacket.jpg",
+    alt: "张敬轩穿米白色外套，对着镜头",
+    cap: "米白外套",
+    credit: "y.g",
+    cls: "tall",
+    pos: "center 20%",
+  },
+  {
+    src: "images/set/06-close.jpg",
+    alt: "张敬轩近景，双手握着麦克风",
+    cap: "近景",
+    credit: "Xuxing",
+    cls: "tall",
+    pos: "center 30%",
+  },
+  {
+    src: "images/set/07-leather.jpg",
+    alt: "张敬轩穿皮衣低头看向舞台一侧",
+    cap: "皮衣",
+    credit: "Xuxing",
+    cls: "tall",
+    pos: "center 18%",
+  },
+  {
+    src: "images/set/08-keys.jpg",
+    alt: "张敬轩在键盘前抬头唱歌",
+    cap: "键盘前",
+    credit: "现场",
+    cls: "tall",
+    pos: "center 24%",
+  },
+  {
+    src: "images/set/09-hoodie.jpg",
+    alt: "张敬轩穿灰色连帽衫，侧脸看向舞台灯光",
+    cap: "灰色连帽衫",
+    credit: "lovemyhins",
+    cls: "tall",
+    pos: "center 22%",
+  },
+  {
+    src: "images/set/10-bomber.jpg",
+    alt: "张敬轩穿墨绿色飞行夹克，仰头笑",
+    cap: "飞行夹克",
+    credit: "现场",
+    cls: "tall",
+    pos: "center 20%",
+  },
+  {
+    src: "images/set/11-lean.jpg",
+    alt: "张敬轩低头靠近镜头，暖色灯光",
+    cap: "近景 · 暖光",
+    credit: "现场",
+    cls: "tall",
+    pos: "center 30%",
+  },
+  {
+    src: "images/set/12-candle.jpg",
+    alt: "张敬轩在烛光前看着镜头",
+    cap: "烛光",
+    credit: "现场",
+    cls: "tall",
+    pos: "center 24%",
+  },
+  {
+    src: "images/set/13-plaid.jpg",
+    alt: "张敬轩穿格子衬衫站在键盘前微笑",
+    cap: "格子衬衫",
+    credit: "Manna",
+    cls: "tall",
+    pos: "center 28%",
+  },
+  {
+    src: "images/set/14-red-point.jpg",
+    alt: "张敬轩穿红色套装站在台上，一只手指向上方",
+    cap: "红装 · 全身",
+    credit: "ihins",
+    cls: "tall",
+    pos: "center 36%",
+  },
+  {
+    src: "images/set/15-red-up.jpg",
+    alt: "张敬轩穿红色套装仰头唱歌",
+    cap: "红装 · 仰头",
+    credit: "ihins",
+    cls: "tall",
+    pos: "center 28%",
+  },
+  {
+    src: "images/set/16-petals.jpg",
+    alt: "张敬轩在粉色花瓣背景前举起麦克风",
+    cap: "花瓣",
+    credit: "ihins",
     cls: "wide",
+    pos: "72% 42%",
   },
   {
-    src: "images/hins-2008.jpg",
-    alt: "2008 年张敬轩穿花纹西装在演唱会唱歌",
-    cap: "2008 · 演唱会",
-    credit: "Fcfhkmelb · 公有领域",
-    href: "https://commons.wikimedia.org/wiki/File:HinsCheungConcert2008.jpg",
-    cls: "mid",
-  },
-  {
-    src: "images/hins-2014.jpg",
-    alt: "2014 年张敬轩穿黑西装，在台上抱着花束微笑",
-    cap: "2014 · 顾嘉煇中大音乐会",
-    credit: "Will629 · CC BY-SA 4.0",
-    href: "https://commons.wikimedia.org/wiki/File:Joseph_Koo_CUHK_Concert_20141130_(cropped)_(2).jpg",
-    cls: "mid",
-  },
-  {
-    src: "images/hins-concert-2022-e.jpg",
-    alt: "张敬轩在红色灯光前把麦克风贴近嘴边",
-    cap: "The Next 20 · 近景",
-    credit: "Kobe Leung · CC BY-SA 2.0",
-    href: "https://commons.wikimedia.org/wiki/File:%E5%BC%B5%E6%95%AC%E8%BB%92%E6%BC%94%E5%94%B1%E6%9C%83_Hins_Cheung_Concert_27_5_2022_(52105675705).jpg",
+    src: "images/set/17-blue.jpg",
+    alt: "张敬轩穿深蓝色亮片长裙，侧身对着麦克风",
+    cap: "蓝裙",
+    credit: "ihins",
     cls: "tall",
+    pos: "center 32%",
   },
   {
-    src: "images/hins-20221113.jpg",
-    alt: "张敬轩穿浅色牛仔外套，双手握着麦克风",
-    cap: "2022.11",
-    credit: "Tombus20032000 · CC BY-SA 4.0",
-    href: "https://commons.wikimedia.org/wiki/File:Hins_Cheung_20221113.jpg",
-    cls: "mid",
-  },
-  {
-    src: "images/hins-concert-2022-a.jpg",
-    alt: "张敬轩唱歌时一只手按在胸口",
-    cap: "The Next 20 · 2022.05.27",
-    credit: "Kobe Leung · CC BY-SA 2.0",
-    href: "https://commons.wikimedia.org/wiki/File:%E5%BC%B5%E6%95%AC%E8%BB%92%E6%BC%94%E5%94%B1%E6%9C%83_Hins_Cheung_Concert_27_5_2022_(52104151982).jpg",
+    src: "images/set/18-young.jpg",
+    alt: "年轻的张敬轩侧脸，暖黄色的背景",
+    cap: "侧脸",
+    credit: "现场",
     cls: "tall",
+    pos: "center 40%",
   },
   {
-    src: "images/hins-2007.jpg",
-    alt: "年轻的张敬轩在舞台上笑着挥手",
-    cap: "2007",
-    credit: "Virusmike · CC BY-SA 2.0",
-    href: "https://commons.wikimedia.org/wiki/File:HinsCheung2007.jpg",
-    cls: "mid",
+    src: "images/set/19-purple.jpg",
+    alt: "张敬轩穿黑色大衣，在紫色灯光里闭眼唱歌",
+    cap: "紫灯",
+    credit: "英皇娱乐",
+    cls: "tall",
+    pos: "center 30%",
+  },
+  {
+    src: "images/set/20-mint.jpg",
+    alt: "张敬轩穿浅绿色高领毛衣，抬头看向上方",
+    cap: "浅绿高领",
+    credit: "Cecilia",
+    cls: "tall",
+    pos: "center 22%",
   },
 ];
 
@@ -262,8 +350,8 @@ $("gallery-grid").innerHTML = photos
   .map(
     (p) => `
     <figure class="${p.cls}">
-      <button type="button" aria-label="查看大图：${esc(p.cap)}" data-zoom="${esc(p.src)}" data-cap="${esc(p.cap)}" data-credit="${esc(p.credit)}" data-href="${esc(p.href)}">
-        <img src="${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy" />
+      <button type="button" aria-label="查看大图：${esc(p.cap)}" data-zoom="${esc(p.src)}" data-cap="${esc(p.cap)}" data-credit="${esc(p.credit)}" data-href="${esc(p.href || "")}">
+        <img src="${esc(p.src)}" alt="${esc(p.alt)}" style="object-position:${esc(p.pos)}" loading="lazy" />
       </button>
       <figcaption>${esc(p.cap)}</figcaption>
     </figure>`
@@ -300,7 +388,10 @@ document.addEventListener("click", (e) => {
     const img = box.querySelector("img");
     img.src = zoom.dataset.zoom;
     img.alt = zoom.querySelector("img")?.alt || "";
-    box.querySelector(".lb-cap").innerHTML = `${esc(zoom.dataset.cap)} · ${esc(zoom.dataset.credit)} · <a href="${zoom.dataset.href}" target="_blank" rel="noopener">Wikimedia</a>`;
+    const source = zoom.dataset.href
+      ? ` · <a href="${zoom.dataset.href}" target="_blank" rel="noopener">出处</a>`
+      : "";
+    box.querySelector(".lb-cap").innerHTML = `${esc(zoom.dataset.cap)} · ${esc(zoom.dataset.credit)}${source}`;
     box.hidden = false;
     box.querySelector(".lb-close").focus();
   }
@@ -319,14 +410,11 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !box.hidden) closeBox();
 });
 
-const wallSlides = [
-  { src: "images/hd/wall-stage-close.jpg", pos: "center 30%", credit: "流动壁纸 · 红馆 · Kobe Leung" },
-  { src: "images/hd/wall-sing-close.jpg", pos: "center 28%", credit: "流动壁纸 · 开口的那一下 · Kobe Leung" },
-  { src: "images/hins-concert-2022-portrait.jpg", pos: "center 18%", credit: "流动壁纸 · 近景 · Kobe Leung" },
-  { src: "images/hd/wall-denim-close.jpg", pos: "center 22%", credit: "流动壁纸 · 2022.11 · Tombus20032000" },
-  { src: "images/hd/wall-stage.jpg", pos: "center 40%", credit: "流动壁纸 · 灯海 · Kobe Leung" },
-  { src: "images/hins-concert-2022-e.jpg", pos: "center 22%", credit: "流动壁纸 · 红灯 · Kobe Leung" },
-];
+const wallSlides = photos.map((p) => ({
+  src: p.src,
+  pos: p.pos,
+  credit: `流动壁纸 · ${p.cap} · ${p.credit}`,
+}));
 
 const wall = $("wall-photos");
 const credit = $("hero-credit");
